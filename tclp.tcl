@@ -22,7 +22,7 @@ critcl::tcl 8.6
 #critcl::debug symbols
 # ## #### ######### ################ #########################
 critcl::cproc tclp {Tcl_Interp* interp pstring parser pstring script int {offset 0}} object0 {
-
+    #include <string.h>
     const char* scriptStart = script.s + offset;
     Tcl_Parse parsePtr;
     const char* termPtr;
@@ -79,7 +79,7 @@ critcl::cproc tclp {Tcl_Interp* interp pstring parser pstring script int {offset
                            Tcl_NewIntObj(termPtr - script.s));
         }
 
-        Tcl_Obj* tokens = Tcl_NewListObj(NULL, 0);
+        Tcl_Obj* tokens = Tcl_NewListObj(0, NULL);
 
         for(int i = 0; i < parsePtr.numTokens; i++) {
 
