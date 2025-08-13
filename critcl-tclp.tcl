@@ -15,7 +15,7 @@ critcl::description {
 critcl::subject tclp {critcl package}
 critcl::subject {basic critcl}
 # Minimal Tcl version the package should load into.
-critcl::tcl 8.6
+critcl::tcl 8.6-
 # Use to activate Tcl memory debugging
 #critcl::debug memory
 # Use to activate building and linking with symbols (for gdb, etc.)
