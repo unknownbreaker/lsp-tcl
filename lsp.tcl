@@ -2,7 +2,7 @@
 # TCL Language Server Protocol Implementation
 # Compatible with Neovim, VS Code, and other LSP clients
 
-package require json 2.0
+package require json 1.3.4
 
 # Global state
 set ::initialized false
